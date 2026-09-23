@@ -1,69 +1,255 @@
-# CodeIgniter 4 Application Starter
+# HRIS Modul Pengajuan Izin dan Cuti Karyawan
 
-## What is CodeIgniter?
+**Human Resource Information System (HRIS) Modul Pengajuan Izin dan Cuti Karyawan Berbasis Web Menggunakan Framework CodeIgniter 4**
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Aplikasi ini merupakan sistem informasi berbasis web yang dikembangkan untuk mendukung pengelolaan data karyawan, pengajuan izin dan cuti, proses verifikasi oleh HRD, serta pembuatan laporan administrasi kepegawaian.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Project ini dikembangkan sebagai bagian dari penelitian pada bagian Logistik PT Sekar Laut Tbk Plant 2 Sidoarjo.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## 📌 Deskripsi
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+Sistem dikembangkan untuk mendigitalisasi proses administrasi izin dan cuti karyawan yang sebelumnya dilakukan menggunakan formulir kertas dan melalui proses persetujuan berjenjang.
 
-## Installation & updates
+Sistem menyediakan pengelolaan data karyawan secara terpusat, pengajuan izin dan cuti secara daring, unggahan dokumen pendukung, proses verifikasi oleh HRD, pengecekan sisa hak cuti, serta pembuatan laporan dalam format PDF dan Excel.
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+## ✨ Fitur Utama
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+### Admin
 
-## Setup
+* Login dan logout
+* Mengelola data departemen
+* Mengelola data jabatan
+* Mengelola data karyawan
+* Mengelola akun pengguna
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+### HRD
 
-## Important Change with index.php
+* Melihat data karyawan
+* Mengelola hak cuti karyawan per tahun
+* Melihat pengajuan izin dan cuti
+* Melakukan verifikasi pengajuan
+* Menyetujui atau menolak pengajuan
+* Melihat dokumen pendukung
+* Menerima notifikasi pengajuan
+* Membuat laporan izin dan cuti
+* Ekspor laporan ke PDF dan Excel
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+### Karyawan
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+* Login dan logout
+* Mengajukan izin secara online
+* Mengajukan cuti secara online
+* Mengunggah dokumen pendukung
+* Melihat sisa hak cuti
+* Memantau status pengajuan
+* Melihat riwayat pengajuan izin
+* Melihat riwayat pengajuan cuti
 
-**Please** read the user guide for a better explanation of how CI4 works!
+## ⚙️ Fitur Khusus Pengajuan Cuti
 
-## Repository Management
+Pada pengajuan cuti, sistem melakukan pengecekan sisa hak cuti sebelum pengajuan diproses.
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+Alur utama:
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+```text
+Karyawan mengisi form cuti
+        ↓
+Sistem menghitung lama cuti
+        ↓
+Pengecekan sisa hak cuti
+        ↓
+   ┌───────────────┐
+   │ Sisa mencukupi│
+   └───────┬───────┘
+           ↓
+Status "Menunggu"
+           ↓
+      Verifikasi HRD
+           ↓
+    Disetujui / Ditolak
+           ↓
+Jika disetujui → sisa cuti otomatis berkurang
+```
 
-## Server Requirements
+Apabila sisa cuti tidak mencukupi, sistem menolak pengajuan dan menampilkan pesan kepada pengguna.
 
-PHP version 8.2 or higher is required, with the following extensions installed:
+## 🛠️ Teknologi
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+* **PHP 8.1+**
+* **CodeIgniter 4**
+* **MySQL**
+* HTML
+* CSS
+* JavaScript
+* Bootstrap
+* Dompdf
+* Composer
+* Visual Studio Code
+* XAMPP / Laragon
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
+## 🏗️ Metode Pengembangan
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+Pengembangan sistem menggunakan **model Fountain**.
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+Tahapan yang diterapkan:
+
+1. Analysis
+2. Requirements Specification
+3. System Design
+4. Program Design
+5. Coding
+6. Testing and Integration
+7. Operation and Software Maintenance
+
+## 🗄️ Perancangan Basis Data
+
+Sistem menggunakan tujuh entitas utama:
+
+```text
+departemen
+jabatan
+karyawan
+users
+hak_cuti
+pengajuan_izin
+pengajuan_cuti
+```
+
+Relasi antarentitas dirancang untuk mendukung pengelolaan data karyawan, hak cuti, pengajuan izin, pengajuan cuti, serta proses persetujuan HRD.
+
+## 👥 Hak Akses
+
+| Role     | Fungsi Utama                                                 |
+| -------- | ------------------------------------------------------------ |
+| Admin    | Mengelola data master dan akun pengguna                      |
+| HRD      | Memproses pengajuan, mengelola hak cuti, dan membuat laporan |
+| Karyawan | Mengajukan izin/cuti dan memantau status pengajuan           |
+
+## 📸 Screenshots
+
+### Login
+
+![Login](docs/screenshots/01-login.png)
+
+### Dashboard Admin
+
+![Dashboard Admin](docs/screenshots/02-dashboard-admin.png)
+
+### Dashboard Karyawan
+
+![Dashboard Karyawan](docs/screenshots/03-dashboard-karyawan.png)
+
+### Dashboard HRD
+
+![Dashboard HRD](docs/screenshots/04-dashboard-hrd.png)
+
+### Manajemen Data Karyawan
+
+![Data Karyawan](docs/screenshots/05-data-karyawan.png)
+
+### Form Pengajuan Izin
+
+![Form Izin](docs/screenshots/06-form-izin.png)
+
+### Form Pengajuan Cuti
+
+![Form Cuti](docs/screenshots/07-form-cuti.png)
+
+### Verifikasi HRD
+
+![Verifikasi HRD](docs/screenshots/08-verifikasi-hrd.png)
+
+### Notifikasi HRD
+
+![Notifikasi HRD](docs/screenshots/09-notifikasi-hrd.png)
+
+### Riwayat Pengajuan Izin
+
+![Riwayat Izin](docs/screenshots/10-riwayat-izin.png)
+
+### Riwayat Pengajuan Cuti
+
+![Riwayat Cuti](docs/screenshots/11-riwayat-cuti.png)
+
+### Laporan PDF dan Excel
+
+![Laporan](docs/screenshots/12-laporan.png)
+
+## 🧪 Pengujian
+
+Pengujian sistem dilakukan menggunakan:
+
+* **Black Box Testing**
+* **User Acceptance Testing (UAT)**
+
+Hasil pengujian Black Box menunjukkan seluruh skenario pengujian utama berjalan sesuai harapan.
+
+Hasil UAT memperoleh rata-rata persentase kelayakan sebesar **85%** dengan kategori **Sangat Layak**.
+
+## 🚀 Instalasi
+
+Clone repository:
+
+```bash
+git clone https://github.com/baihaqihafid/hris-modul-izincuti.git
+```
+
+Masuk ke folder project:
+
+```bash
+cd hris-modul-izincuti
+```
+
+Install dependency:
+
+```bash
+composer install
+```
+
+Buat file `.env` berdasarkan konfigurasi environment CodeIgniter 4 dan sesuaikan konfigurasi database MySQL.
+
+Import database menggunakan file:
+
+```text
+db_izincuti.sql
+```
+
+Sesuaikan konfigurasi database pada `.env`, kemudian jalankan aplikasi:
+
+```bash
+php spark serve
+```
+
+## 📁 Struktur Project
+
+```text
+hris-modul-izincuti/
+├── app/
+├── docs/
+│   └── screenshots/
+├── public/
+├── tests/
+├── writable/
+├── db_izincuti.sql
+├── composer.json
+├── composer.lock
+├── spark
+├── .gitignore
+└── README.md
+```
+
+## 📚 Penelitian
+
+Project ini dikembangkan berdasarkan penelitian:
+
+**"Perancangan Human Resource Information System (HRIS) Modul Pengajuan Izin dan Cuti Karyawan Berbasis Web Menggunakan Framework CodeIgniter 4"**
+
+Program Studi Informatika
+Universitas Muhammadiyah Sidoarjo
+
+## 👨‍💻 Pengembang
+
+**Ahmad Baihaqi Hafid**
+
+Mahasiswa S1 Informatika
+Universitas Muhammadiyah Sidoarjo
