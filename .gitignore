@@ -1,0 +1,23 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# CodeIgniter 4
+/writable/*
+!/writable/.gitkeep
+
+# Dependencies
+/vendor/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
