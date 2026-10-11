@@ -146,11 +146,11 @@ Relasi antarentitas dirancang untuk mendukung pengelolaan data karyawan, hak cut
 </tr>
 <tr>
 <td align="center"><b>Notifikasi HRD</b><br><img src="screenshots/09-notifikasi-hrd.png" width="400"></td>
-<td align="center"><b>Riwayat Pengajuan Izin</b><br><img src="screenshots/10-riwayat-izin.png" width="400"></td>
+<td align="center"><b>Riwayat Pengajuan Izin dan Cuti</b><br><img src="screenshots/10-riwayat-izin.png" width="400"></td>
 </tr>
 <tr>
-<td align="center"><b>Riwayat Pengajuan Cuti</b><br><img src="screenshots/11-riwayat-cuti.png" width="400"></td>
-<td align="center"><b>Laporan PDF dan Excel</b><br><img src="screenshots/12-laporan.png" width="400"></td>
+<td align="center"><b>Bukti Pengajuan Elektronik</b><br><img src="screenshots/11-riwayat-cuti.png" width="400"></td>
+<td align="center"><b>Laporan PDF</b><br><img src="screenshots/12-laporan.png" width="400"></td>
 </tr>
 </table>
 
