@@ -130,26 +130,26 @@ Relasi antarentitas dirancang untuk mendukung pengelolaan data karyawan, hak cut
 <table>
 <tr>
 <td align="center"><b>Login</b><br><img src="screenshots/Login.png" width="400"></td>
-<td align="center"><b>Dashboard Admin</b><br><img src="screenshots/02-dashboard-admin.png" width="400"></td>
+<td align="center"><b>Dashboard Admin</b><br><img src="screenshots/Dashboard Admin.png" width="400"></td>
 </tr>
 <tr>
-<td align="center"><b>Dashboard Karyawan</b><br><img src="screenshots/03-dashboard-karyawan.png" width="400"></td>
-<td align="center"><b>Dashboard HRD</b><br><img src="screenshots/04-dashboard-hrd.png" width="400"></td>
+<td align="center"><b>Dashboard Karyawan</b><br><img src="screenshots/Dashboard Karyawan.png" width="400"></td>
+<td align="center"><b>Dashboard HRD</b><br><img src="screenshots/Dashboard HRD.png" width="400"></td>
 </tr>
 <tr>
-<td align="center"><b>Manajemen Data Karyawan</b><br><img src="screenshots/05-data-karyawan.png" width="400"></td>
-<td align="center"><b>Form Pengajuan Izin</b><br><img src="screenshots/06-form-izin.png" width="400"></td>
+<td align="center"><b>Manajemen Data Karyawan</b><br><img src="screenshots/Manajemen Data Karyawan.png" width="400"></td>
+<td align="center"><b>Form Pengajuan Izin</b><br><img src="screenshots/Form Pengajuan Izin.png" width="400"></td>
 </tr>
 <tr>
-<td align="center"><b>Form Pengajuan Cuti</b><br><img src="screenshots/07-form-cuti.png" width="400"></td>
-<td align="center"><b>Verifikasi HRD</b><br><img src="screenshots/08-verifikasi-hrd.png" width="400"></td>
+<td align="center"><b>Form Pengajuan Cuti</b><br><img src="screenshots/Form Pengajuan Cuti.png" width="400"></td>
+<td align="center"><b>Verifikasi HRD</b><br><img src="screenshots/Verifikasi HRD.png" width="400"></td>
 </tr>
 <tr>
-<td align="center"><b>Notifikasi HRD</b><br><img src="screenshots/09-notifikasi-hrd.png" width="400"></td>
-<td align="center"><b>Riwayat Pengajuan Izin dan Cuti</b><br><img src="screenshots/10-riwayat-izin.png" width="400"></td>
+<td align="center"><b>Notifikasi HRD</b><br><img src="screenshots/Notifikasi HRD.png" width="400"></td>
+<td align="center"><b>Riwayat Pengajuan Izin dan Cuti</b><br><img src="screenshots/Riwayat Pengajuan Cuti dan Izin.png" width="400"></td>
 </tr>
 <tr>
-<td align="center"><b>Bukti Pengajuan Elektronik</b><br><img src="screenshots/11-riwayat-cuti.png" width="400"></td>
+<td align="center"><b>Bukti Pengajuan Elektronik</b><br><img src="screenshots/Bukti Pengajuan Elektronik.png" width="400"></td>
 <td align="center"><b>Laporan PDF</b><br><img src="screenshots/12-laporan.png" width="400"></td>
 </tr>
 </table>
