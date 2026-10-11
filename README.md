@@ -150,7 +150,7 @@ Relasi antarentitas dirancang untuk mendukung pengelolaan data karyawan, hak cut
 </tr>
 <tr>
 <td align="center"><b>Bukti Pengajuan Elektronik</b><br><img src="screenshots/Bukti Pengajuan Elektronik.png" width="400"></td>
-<td align="center"><b>Laporan PDF</b><br><img src="screenshots/12-laporan.png" width="400"></td>
+<td align="center"><b>Laporan PDF</b><br><img src="screenshots/Laporan PDF.png" width="400"></td>
 </tr>
 </table>
 
