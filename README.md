@@ -129,7 +129,7 @@ Relasi antarentitas dirancang untuk mendukung pengelolaan data karyawan, hak cut
 
 <table>
 <tr>
-<td align="center"><b>Login</b><br><img src="screenshots/login.png" width="400"></td>
+<td align="center"><b>Login</b><br><img src="screenshots/Login.png" width="400"></td>
 <td align="center"><b>Dashboard Admin</b><br><img src="screenshots/02-dashboard-admin.png" width="400"></td>
 </tr>
 <tr>
